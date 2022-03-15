@@ -6,6 +6,12 @@ pipeline {
                 echo 'Clonning..'
             }
         }
+        stage('Check Ruby') {
+            steps {
+                echo 'Check Ruby version..'
+                sh 'ruby -v'
+            }
+        }
         stage('Test') {
             steps {
                 echo 'Testing..'
