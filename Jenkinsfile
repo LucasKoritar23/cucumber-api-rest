@@ -17,7 +17,7 @@ pipeline {
             steps {
                 echo 'Installing Gems'
                 sh 'rm Gemfile.lock'
-                sh 'sudo -S bundle install'
+                sh 'bundle install'
             }
         }
         stage('Test') {
