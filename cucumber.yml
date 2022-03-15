@@ -1,0 +1,4 @@
+default: --no-source --color --format pretty -p json -p html -p allure
+json: --format json --out=reports/json/cucumber-jornada.json
+html: --format html --out=reports/html/cucumber-jornada.html
+allure: --format AllureCucumber::CucumberFormatter --out reports/allure-results
