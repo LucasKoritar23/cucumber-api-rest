@@ -1,11 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Clone Project') {
-            steps {
-                echo 'Clonning..'
-            }
-        }
         stage('Check Ruby') {
             steps {
                 echo 'Check Ruby version..'
@@ -21,7 +16,6 @@ pipeline {
         stage('Gem Installs') {
             steps {
                 echo 'Installing Gems'
-                sh 'sudo gem install bundler'
                 sh 'rm Gemfile.lock'
                 sh 'bundle install'
             }
