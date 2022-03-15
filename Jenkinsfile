@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker { image 'ruby:3' } }
+    agent { docker { image 'ubuntu' } }
     stages {
         stage('Clone Project') {
             steps {
